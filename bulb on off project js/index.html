@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <Style>
+        .img{
+
+           
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+
+        }
+        .img img{
+            margin: 10px;
+        }
+        #btn{
+            padding: 15px;
+            margin: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            background: red;
+            color: white;
+
+        }
+        #img1{
+            
+            object-fit: contain;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+        }
+
+
+    </Style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="img">
+            <img id="img1" src="bulb off.png" alt="">
+            <div class="btns">
+
+            <button id="btn-on" onclick="btnOn()">Turn ON</button>
+            <button id="btn-off" onclick="btnOff()">Turn off</button>
+
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        function btnOn(){
+            
+            document.getElementById("img1").src = "bulb on.png";
+            
+        }
+
+        function btnOff(){
+            
+            document.getElementById("img1").src = "bulb off.png";
+            
+        }
+    </script>
+</body>
+</html>
