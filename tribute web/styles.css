@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #EEEEEE;
+    
+    border-radius: 5px;
+    margin: 25px;
+}
+
+#img-div{
+    text-align: center;
+    
+    
+    
+    background: white;
+    padding: 10px;
+    margin: 0;
+}
+.heading{
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+.points ul{
+    line-height: 25px;
+    max-width: 550px;
+    margin: 0 auto 50px auto;
+}
+
+.end2{
+    line-height: 25px;
+    max-width: 540px;
+    margin: 0 auto 50px auto;
+    
+}
