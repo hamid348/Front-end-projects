@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form with Firebase</title>
+</head>
+<body>
+    <div class="form">
+        <div class="title">Welcome</div>
+        <div class="subtitle">Let's create your account!</div>
+        <div id="username" class="input-container ic1">
+          <input id="firstname" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="firstname" class="placeholder">First name</label>
+        </div>
+        <div class="input-container ic2">
+          <input id="lastname" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="lastname" class="placeholder">Last name</label>
+        </div>
+        <div class="input-container ic2">
+          <input id="email" class="input" type="text" placeholder=" " />
+          <div class="cut cut-short"></div>
+          <label for="email" class="placeholder"> Email </label>
+        </div>
+        <button type="submit" class="submit" id="submit">submit</button>
+      </div>
+
+
+
+
+      <!-- firebase data base script  -->
+      <script type="module">
+        
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
+        import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-database.js";
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBMSXU_igGHaEXD9SfynTipv6AIfdSfYQg",
+          authDomain: "fir-byhamid.firebaseapp.com",
+          databaseURL: "https://fir-byhamid-default-rtdb.europe-west1.firebasedatabase.app",
+          projectId: "fir-byhamid",
+          storageBucket: "fir-byhamid.appspot.com",
+          messagingSenderId: "740754366831",
+          appId: "1:740754366831:web:809e7a4ae4ad207ca9c89a",
+          measurementId: "G-EQPTGFM81Z"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+       const db = getDatabase(app);
+       document.getElementById('submit').addEventListener('click', function(e){
+        e.preventDefault();
+        set(ref(db, 'user/' + document.getElementById("firstname").value),
+            {
+                firstname: document.getElementById("firstname").value,
+                lastname: document.getElementById("lastname").value,
+                email: document.getElementById("email").value
+            });
+        
+            alert("login successfull !")
+
+       })
+
+      </script>
+</body>
+</html>
