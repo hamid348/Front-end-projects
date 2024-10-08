@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(88, 2, 2);
+    color: white;
+}
+.pics{
+    width: 100%;
+   background-color: white;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    display: none;
+    border-radius: 20px;
+}
+
+
+.team-img{
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    margin: 10px;
+}
+.content{
+    max-width: 500px;
+    text-align: center;
+    
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#explore{
+    color: white;
+    border: none;
+    background-color: blue;
+    padding: 10px 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
